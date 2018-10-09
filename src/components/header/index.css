@@ -1,0 +1,54 @@
+.header-wrap .user-info {
+  padding: 0 20px;
+}
+.header-wrap .header {
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #f9c700;
+}
+.header-wrap .username {
+  font-size: 16px;
+  font-weight: 700;
+  color: #f9c700;
+}
+.header-wrap .user-wrap {
+  padding: 0 5px;
+}
+.header-wrap .logout {
+  color: #409eff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+.header-wrap .header-detail {
+  padding: 0 20px;
+  line-height: 40px;
+  height: 40px;
+}
+.header-wrap .header-detail .breadcrumb-title {
+  width: 12.5%;
+  text-align: center;
+  position: relative;
+  font-size: 18px;
+}
+.header-wrap .header-detail .breadcrumb-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 12px solid transparent;
+  border-top: 12px solid #fff;
+  width: 0;
+  height: 0;
+}
+.header-wrap .header-detail .date {
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.header-wrap .header-detail .weather {
+  font-size: 14px;
+  font-weight: 700;
+}
