@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import './index.less'
 
-class Footer extends Component {
+class FooterBottom extends Component {
     render() {
         return (
-            <div>
-                <h2>底部</h2>
+            <div className='footer'>
+                底部信息栏！
             </div>
         );
     }
 }
 
-export default Footer;
+export default FooterBottom;
