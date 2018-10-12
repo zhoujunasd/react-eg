@@ -15,16 +15,16 @@ import FooterBottom from './../../components/footer/index';
 // import PropTypes from 'prop-types'
 
 class Admin extends Component {
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     counter: this.props.counter,
-        //     increment:this.props.increment,
-        //     decrement:this.props.decrement,
-        //     incrementAsync:this.props.incrementAsync,
-        //     incrementIfOdd:this.props.incrementIfOdd,
-        // };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     // this.state = {
+    //     //     counter: this.props.counter,
+    //     //     increment:this.props.increment,
+    //     //     decrement:this.props.decrement,
+    //     //     incrementAsync:this.props.incrementAsync,
+    //     //     incrementIfOdd:this.props.incrementIfOdd,
+    //     // };
+    // }
 
     render() {
         // console.log(this.props);
@@ -54,8 +54,8 @@ class Admin extends Component {
             // </div>
             <div className='admin'>
                 <Row>
-                    <Col span={4}><NavBar/></Col>
-                    <Col span={20}>
+                    <Col span={4} className='nav-left'><NavBar/></Col>
+                    <Col span={20} style={{height: '100vh',overflow: 'auto'}}>
                         <HeaderTop />
                         <div className='content-wrap'>
                                         {/* counter={this.props.counter}

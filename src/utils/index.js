@@ -50,3 +50,4 @@ export const axios = {
         return this.fatch(url, data, config, 'delete')
     },
 }
+

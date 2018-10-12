@@ -4,7 +4,9 @@
 }
 .content-wrap .content {
   background-color: #fff;
-  height: 60vh;
+}
+.nav-left {
+  height: 100vh;
 }
 .header {
   background-color: #fff;

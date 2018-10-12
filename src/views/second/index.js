@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './index.less'
+
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
 import * as action from '../../actions/counter'
@@ -7,6 +8,11 @@ import * as action from '../../actions/counter'
 import PropTypes from 'prop-types'
 
 class Second extends Component {
+
+    componentWillUnmount(){
+            
+    }
+
     render() {
         // console.log(this.props)
         return (
@@ -22,6 +28,8 @@ class Second extends Component {
         );
     }
 }
+
+
 
 Second.propTypes = {
     increment: PropTypes.func.isRequired,

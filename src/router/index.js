@@ -13,6 +13,10 @@ import Second from './../views/second/index';
 // import * as action from '../actions/counter'
 
 // import PropTypes from 'prop-types'
+import Order from './../views/order/index';
+import Histogram from './../views/histogram/index';
+import PieDiagram from './../views/pieDiagram/index';
+import MapCreate from './../views/map/index';
 
 class Router extends Component {
     render() {
@@ -24,11 +28,15 @@ class Router extends Component {
                     <Switch>
                         <Redirect from='/' exact to='/admin' />
                         <Redirect from='/admin' exact to='/admin/home' />
+                        <Route  path='/admin/details/:id' component={MapCreate}></Route>
                         <Route path='/admin'  render={() => 
                             <Admin>
                                 <Switch>
                                     <Redirect from='/admin' exact to='/admin/home' />
                                     <Route  path='/admin/home' component={Home}></Route>
+                                    <Route  path='/admin/order' component={Order}></Route>
+                                    <Route  path='/admin/histogram' component={Histogram}></Route>
+                                    <Route  path='/admin/piediagram' component={PieDiagram}></Route>
                                     <Route path='/admin/second' component={Second}
                                         // counter={this.props.counter}
                                         // increment={this.props.increment}
