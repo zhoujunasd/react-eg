@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './index.less'
+import { connect} from 'react-redux'
 import {formaDate as utils} from '../../utils'
 import axios from 'axios'
 // import {axios as fetch} from '../../utils'
+
 
 class HeaderTop extends Component {
     state = {
@@ -51,29 +53,52 @@ class HeaderTop extends Component {
     componentWillMount(){
         this.getTime()
         this.getWeather()
+        // if(this.props.className == 'header-top'){
+        //     console.log('aaa');
+        // }
+        // console.log(this.props);
     }
     componentWillUnmount(){
         clearInterval(this.state.timeer)
     }
     render() {
         return (
-            <div className='header-wrap'>
+            <div className={ this.props.className == 'header-top' ? 'header-detail' : 'header-wrap'}> 
                 <div className='header clearfix'>
                     <div className='user-info flr'>
                         <div className="user-wrap fll">欢迎，<span className="username">姓名</span></div>
                         <div className='logout fll'>退出</div>
                     </div>
                 </div>
-                <div className='header-detail clearfix'>
-                    <div className="breadcrumb-title fll">首页</div>
-                    <div className="weather flr clearfix">
-                        <div className="date fll">{this.state.time}</div>
-                        <div className="weather-detail fll">{this.state.weather}</div>
-                    </div>
-                </div>
+                {
+                    this.props.className == 'header-top' ? '' :
+                    <div className='header-detail clearfix'>
+                        <div className="breadcrumb-title fll">{this.props.menuText}</div>
+                        <div className="weather flr clearfix">
+                            <div className="date fll">{this.state.time}</div>
+                            <div className="weather-detail fll">{this.state.weather}</div>
+                        </div>
+                    </div> 
+                }
             </div>
         );
     }
 }
 
-export default HeaderTop;
+// export default HeaderTop;
+// export default connect(
+//     // function mapStateToProps(state){
+//     //     return {
+//     //         mennuText : state.mennuText
+//     //     }
+//     // }
+//     (state)=>({
+//         mennuText: state.mennuText
+//     })
+// )(HeaderTop);
+function mapStarteTopProps(state) {
+    return {
+        menuText: state.menuText
+    }
+}
+export default connect(mapStarteTopProps)(HeaderTop);

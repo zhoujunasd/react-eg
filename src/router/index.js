@@ -20,7 +20,6 @@ import MapCreate from './../views/map/index';
 
 class Router extends Component {
     render() {
-        console.log(this.props)
         return (
             <div>
                 {/* <Provider store={store}> */}

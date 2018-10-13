@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import './index.less'
 
 import ReactEcharts from 'echarts-for-react'
-// import echarts from 'echarts/lib/echarts'
+import echarts from 'echarts/lib/echarts'
 import 'echarts/lib/chart/pie';
 import 'echarts/lib/component/legend';
 
 import { Card } from 'antd';
 
-// import echartsTheme from './shine'
+import echartsTheme from './shine'
 
  class PieDiagram extends Component {
 
-  // componentWillMount(){
-  //   echarts.registerTheme('pietheme',echartsTheme)
-  // }
+  componentWillMount(){
+    echarts.registerTheme('pietheme',echartsTheme)
+  }
 
   pie = () => {
     return {
@@ -129,10 +129,10 @@ import { Card } from 'antd';
     return (
       <div>
           <Card title='饼状图一'>
-            <ReactEcharts option={this.pie()} ></ReactEcharts>
+            <ReactEcharts option={this.pie()} theme='pietheme'></ReactEcharts>
           </Card>
           <Card title='饼状图二'>
-            <ReactEcharts option={this.pie1()} ></ReactEcharts>
+            <ReactEcharts option={this.pie1()} theme='pietheme'></ReactEcharts>
           </Card>
       </div>
     )

@@ -29,8 +29,6 @@ class Second extends Component {
     }
 }
 
-
-
 Second.propTypes = {
     increment: PropTypes.func.isRequired,
     decrement: PropTypes.func.isRequired,

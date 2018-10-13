@@ -56,6 +56,23 @@
   font-size: 14px;
   font-weight: 700;
 }
+.header-detail .header {
+  height: 60px;
+  line-height: 60px;
+  background-color: skyblue;
+  border-bottom: 1px solid #f1f3f5;
+}
+.header-detail .header .user-info {
+  padding: 0 40px;
+}
+.header-detail .header .user-wrap {
+  color: #fff;
+  padding: 0 5px;
+}
+.header-detail .header .logout {
+  font-size: 14px;
+  font-weight: 600;
+}
 .counter {
   width: 600px;
   height: 40px;
